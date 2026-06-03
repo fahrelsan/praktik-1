@@ -24,6 +24,7 @@ class DealersFixture extends TestFixture
                 'alamat' => 'Lorem ipsum dolor sit amet',
                 'no_telp' => 1,
                 'no_hp' => 1,
+                'kode_dealer' => 'Lorem ipsum dolor ',
             ],
         ];
         parent::init();

@@ -69,6 +69,26 @@ class DealersTable extends Table
             ->integer('no_hp')
             ->allowEmptyString('no_hp');
 
+        $validator
+            ->scalar('kode_dealer')
+            ->maxLength('kode_dealer', 20)
+            ->allowEmptyString('kode_dealer')
+            ->add('kode_dealer', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);
+
         return $validator;
+    }
+
+    /**
+     * Returns a rules checker object that will be used for validating
+     * application integrity.
+     *
+     * @param \Cake\ORM\RulesChecker $rules The rules object to be modified.
+     * @return \Cake\ORM\RulesChecker
+     */
+    public function buildRules(RulesChecker $rules): RulesChecker
+    {
+        $rules->add($rules->isUnique(['kode_dealer'], ['allowMultipleNulls' => true]), ['errorField' => 'kode_dealer']);
+
+        return $rules;
     }
 }

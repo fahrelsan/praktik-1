@@ -128,6 +128,7 @@
             <thead>
                 <tr>
                     <th><?= $this->Paginator->sort('id_dealer', '#') ?></th>
+                    <th><?= $this->Paginator->sort('kode_dealer', 'Kode Dealer') ?></th>
                     <th><?= $this->Paginator->sort('nama', 'Nama Dealer') ?></th>
                     <th><?= $this->Paginator->sort('alamat', 'Alamat') ?></th>
                     <th><?= $this->Paginator->sort('no_telp', 'No. Telepon') ?></th>
@@ -139,6 +140,7 @@
                 <?php foreach ($dealers as $dealer): ?>
                 <tr>
                     <td class="id-cell">#<?= $this->Number->format($dealer->id_dealer) ?></td>
+                    <td class="id-cell">0<?= h($dealer->kode_dealer)?></td>
                     <td style="font-weight:600;"><?= h($dealer->nama) ?></td>
                     <td><?= h($dealer->alamat) ?></td>
                     <td><?= $dealer->no_telp === null ? '<span style="color:#9ca3af;">—</span>' : h($dealer->no_telp) ?></td>

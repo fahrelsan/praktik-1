@@ -13,6 +13,7 @@ use Cake\ORM\Entity;
  * @property string|null $alamat
  * @property int|null $no_telp
  * @property int|null $no_hp
+ * @property string|null $kode_dealer
  */
 class Dealer extends Entity
 {
@@ -30,5 +31,6 @@ class Dealer extends Entity
         'alamat' => true,
         'no_telp' => true,
         'no_hp' => true,
+        'kode_dealer' => true,
     ];
 }
