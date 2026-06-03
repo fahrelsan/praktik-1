@@ -63,7 +63,7 @@ endif;
     <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
-        CakePHP: the rapid development PHP framework:
+        Welcome to Dealer Manager
         <?= $this->fetch('title') ?>
     </title>
     <?= $this->Html->meta('icon') ?>
@@ -140,11 +140,6 @@ endif;
             ['HND-003', 'Honda Vario 160',      'matic',    24900000, 198, 66],
             ['HND-004', 'Honda Scoopy',         'matic',    21500000, 176, 58],
             ['HND-005', 'Honda PCX 160',        'matic',    31900000, 134, 89],
-            ['HND-006', 'Honda ADV 160',        'adventure',34500000,  97, 97],
-            ['HND-007', 'Honda CB150R',         'sport',    26700000,  88, 44],
-            ['HND-008', 'Honda CBR150R',        'sport',    39900000,  54, 54],
-            ['HND-009', 'Honda Revo',           'bebek',    16200000, 163, 81],
-            ['HND-010', 'Honda Supra GTR 150',  'bebek',    22100000,  72, 72],
         ];
         $totalUnit  = array_sum(array_column($motors, 4));
         $totalOmzet = array_sum(array_map(fn($m) => $m[3] * $m[4], $motors));
@@ -160,7 +155,7 @@ endif;
         <div class="stat-card green">
             <div class="stat-label">Total Unit Terjual</div>
             <div class="stat-value"><?= number_format($totalUnit, 0, ',', '.') ?></div>
-            <div class="stat-sub">Jan – Jun 2025</div>
+            <div class="stat-sub">Jan - Jun 2025</div>
         </div>
         <div class="stat-card navy">
             <div class="stat-label">Total Omzet</div>
@@ -253,11 +248,6 @@ endif;
                     ['HND-003', 'Honda Vario 160',     'matic',    24900000,  198, 66],
                     ['HND-004', 'Honda Scoopy',        'matic',    21500000,  176, 58],
                     ['HND-005', 'Honda PCX 160',       'matic',    31900000,  134, 89],
-                    ['HND-006', 'Honda ADV 160',       'adventure',34500000,   97, 97],
-                    ['HND-007', 'Honda CB150R',        'sport',    26700000,   88, 44],
-                    ['HND-008', 'Honda CBR150R',       'sport',    39900000,   54, 54],
-                    ['HND-009', 'Honda Revo',          'bebek',    16200000,  163, 81],
-                    ['HND-010', 'Honda Supra GTR 150', 'bebek',    22100000,   72, 72],
                 ];
                 $grandTotal = 0;
                 $grandUnit  = 0;
